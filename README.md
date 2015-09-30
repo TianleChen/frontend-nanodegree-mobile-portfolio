@@ -73,3 +73,13 @@ Feeling uninspired by the portfolio? Here's a list of cool portfolios I found af
 * <a href="http://www.84colors.com/portfolio.html">http://www.84colors.com/portfolio.html</a>
 
 ### What I have done
+### Optimize index.html
+1. inline css
+1. use async for javascript and media="print" for css
+1. localize imges and optimize pizzeria.jpg
+1. use YUI compressor to compress html file
+
+### Optimize pizza.html
+1. inline css
+1. move the phase calculation out of for loop and generate the phases with another simple loop
+1. move the width calculation out of for loop
