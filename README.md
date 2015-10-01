@@ -83,7 +83,8 @@ Feeling uninspired by the portfolio? Here's a list of cool portfolios I found af
 1. inline css
 1. move the phase calculation out of for loop and generate the phases with another simple loop
 1. move the width calculation out of for loop
-#### Most recent updates
+
+##### Most recent updates
 1. use getElementById and getElementByClassName rather than querySelector
 1. use getPizzaElem rather than touch the DOM in every iteration
 1. declare the pizzasDiv out of the loop to avoid touching the DOM in the loop
