@@ -538,9 +538,13 @@ window.addEventListener('scroll', updatePositions);
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
   //use height property of the screen to dynamically calculate the required number of background pizzas
+  //calculate the number of row with the ratio of hight over width
   var iHeight = window.screen.height;
-  var rows = Math.floor(iHeight / 100);
+  var iWidth = window.screen.width;
+  var ratio = iHeight / iWidth;
   var cols = 6;
+  var standardRows = 4;
+  var rows = Math.ceil(ratio * standardRows);
   var numPizzas = rows *cols;
   var s = 256;
   //declare variable elem outside the for loop
