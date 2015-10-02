@@ -540,7 +540,7 @@ document.addEventListener('DOMContentLoaded', function() {
   //use height property of the screen to dynamically calculate the required number of background pizzas
   var iHeight = window.screen.height;
   var rows = Math.floor(iHeight / 100);
-  var cols = 8;
+  var cols = 6;
   var numPizzas = rows *cols;
   var s = 256;
   //declare variable elem outside the for loop
