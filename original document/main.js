@@ -539,14 +539,11 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   //use height property of the screen to dynamically calculate the required number of background pizzas
   //calculate the number of row with the ratio of hight over width
-  var iHeight = window.screen.height;
-  var iWidth = window.screen.width;
-  var ratio = iHeight / iWidth;
-  var cols = 6;
-  var standardRows = 4;
-  var rows = Math.ceil(ratio * standardRows);
-  var numPizzas = rows *cols;
   var s = 256;
+  var iHeight = getViewportHeight();
+  var rows = iHeight / s;
+  var cols = 8
+  var numPizzas = rows * cols;
   //declare variable elem outside the for loop
   var elem;
   //use getElementById rather than querySelector and create the variable movingPizzas outside the loop
@@ -563,3 +560,13 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   updatePositions();
 });
+
+function getViewportHeight( ) {
+  // http://stackoverflow.com/questions/3437786/get-the-size-of-the-screen-current-web-page-and-browser-window
+  var w = window,
+      d = document,
+      e = d.documentElement,
+      g = d.getElementsByTagName('body')[0],
+      windowHeight = w.innerHeight|| e.clientHeight|| g.clientHeight;
+  return windowHeight;
+}
